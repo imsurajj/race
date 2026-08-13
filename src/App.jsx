@@ -9,12 +9,10 @@ import TechStackPage from './pages/TechStackPage';
 export default function App() {
   return (
     <Router>
-      <div className="bg-[#0A0A0D] min-h-screen text-white selection:bg-[#E8112D] selection:text-white">
-        {/* Thin Persistent Top Bar */}
+      <div className="site-shell">
         <Navbar />
 
-        {/* 4-Route View Switcher */}
-        <main>
+        <main className="site-main">
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/app" element={<AppToolPage />} />
@@ -23,13 +21,13 @@ export default function App() {
           </Routes>
         </main>
 
-        {/* Minimal Footer */}
-        <footer className="border-t border-white/10 py-8 text-xs text-[#9A9AA5] mt-20 bg-[#08080A]">
-          <div className="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-16 flex flex-wrap items-center justify-between gap-4">
-            <div>
-              <span className="font-headline font-bold text-white tracking-wide">THE SILENT CO-DRIVER</span> — Motorsport Telemetry Engine
+        <footer className="site-footer">
+          <div className="page-wrap footer-inner">
+            <div className="footer-brand">
+              <span className="brand-text footer-name">THE SILENT CO-DRIVER</span>
+              <span className="footer-text">Motorsport Telemetry Engine</span>
             </div>
-            <div className="flex items-center gap-4 text-[11px] font-mono">
+            <div className="footer-meta">
               <span>Whisper large-v3-turbo</span>
               <span>•</span>
               <span>wav2vec2 Emotion Engine</span>

@@ -170,12 +170,8 @@ export default function TelemetryToolPanel({ previewMode = false }) {
 
   return (
     <div className="space-y-6 text-left">
-      
-      {/* THREE-ZONE APP SHELL (LEFT 20% / CENTER 50% / RIGHT 30%) */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
-        
-        {/* LEFT ZONE (20% -> lg:col-span-3 or 2.5): Vertical Clip Selector List */}
-        <div className="lg:col-span-3 saas-card p-6 flex flex-col justify-between space-y-5 bg-[#141417] text-left">
+      <div className="grid grid-cols-1 gap-5 lg:grid-cols-[0.9fr_1.4fr_0.95fr] lg:items-stretch">
+        <div className="saas-card flex flex-col justify-between space-y-5 bg-[#141417] p-4 sm:p-5 text-left lg:p-6">
           <div className="space-y-4">
             <div className="flex items-center justify-between border-b border-white/10 pb-4">
               <span className="text-xs font-bold text-[#9A9AA5] uppercase tracking-wider flex items-center gap-1.5">
@@ -245,8 +241,7 @@ export default function TelemetryToolPanel({ previewMode = false }) {
           </div>
         </div>
 
-        {/* CENTER ZONE (50% -> lg:col-span-5 or 6): Audio Waveform & Whisper Transcript */}
-        <div className="lg:col-span-5 saas-card p-6 space-y-5 flex flex-col justify-between bg-[#141417] text-left">
+        <div className="saas-card flex flex-col justify-between space-y-5 bg-[#141417] p-4 sm:p-5 text-left lg:p-6">
           <div className="space-y-4">
             <div className="flex items-center justify-between border-b border-white/10 pb-4">
               <div>
@@ -315,8 +310,7 @@ export default function TelemetryToolPanel({ previewMode = false }) {
           </div>
         </div>
 
-        {/* RIGHT ZONE (30% -> lg:col-span-4): Mood Classification Result Card */}
-        <div className="lg:col-span-4 saas-card p-6 space-y-5 flex flex-col justify-between bg-[#141417] text-left">
+        <div className="saas-card flex flex-col justify-between space-y-5 bg-[#141417] p-4 sm:p-5 text-left lg:p-6">
           <div className="space-y-5">
             <div className="flex items-center justify-between border-b border-white/10 pb-4">
               <span className="text-xs font-bold text-[#9A9AA5] uppercase tracking-wider">MOOD RESULT</span>

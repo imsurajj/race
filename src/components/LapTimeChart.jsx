@@ -208,8 +208,7 @@ export default function LapTimeChart({ data, onSelectLap }) {
         </div>
       </div>
 
-      {/* Chart Canvas */}
-      <div className="relative w-full h-[320px]">
+      <div className="relative h-[360px] w-full sm:h-[420px] lg:h-[460px]">
         <canvas ref={chartRef}></canvas>
       </div>
 
