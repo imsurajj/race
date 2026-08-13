@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import HomePage from './pages/HomePage';
@@ -7,10 +7,17 @@ import HowItWorksPage from './pages/HowItWorksPage';
 import TechStackPage from './pages/TechStackPage';
 
 export default function App() {
+  const [theme, setTheme] = useState('dark');
+
+  useEffect(() => {
+    document.documentElement.classList.toggle('dark', theme === 'dark');
+    document.documentElement.dataset.theme = theme;
+  }, [theme]);
+
   return (
     <Router>
-      <div className="site-shell">
-        <Navbar />
+      <div className="site-shell" data-theme={theme}>
+        <Navbar theme={theme} onToggleTheme={() => setTheme((current) => (current === 'dark' ? 'light' : 'dark'))} />
 
         <main className="site-main">
           <Routes>
@@ -24,7 +31,7 @@ export default function App() {
         <footer className="site-footer">
           <div className="page-wrap footer-inner">
             <div className="footer-brand">
-              <span className="brand-text footer-name">THE SILENT CO-DRIVER</span>
+              <span className="brand-text footer-name">SILENT CO</span>
               <span className="footer-text">Motorsport Telemetry Engine</span>
             </div>
             <div className="footer-meta">
